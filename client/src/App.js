@@ -54,7 +54,7 @@ function App() {
 
   return (
     <div style={{ maxWidth: "800px", margin: "50px auto", fontFamily: "Arial, sans-serif" }}>
-      <h1 style={{ textAlign: "center" }}>User Management</h1>
+      <h1 style={{ textAlign: "center" }}>SB User Management</h1>
       <UserForm
         addUser={addUser}
         editingUser={editingUser}
