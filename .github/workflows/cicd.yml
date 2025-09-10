@@ -47,8 +47,9 @@ jobs:
         run: npm run build
 
   deploy:
-    needs: build
+    name: Deploy to Render App
     runs-on: ubuntu-latest
+    needs: [backend, frontend]
     steps:
       - name: Trigger Backend Deployment on Render
         run: |
