@@ -10,7 +10,7 @@ function App() {
   // Fetch all users
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/users/getAll");
+      const res = await axios.get("https://scotiabank-demo.onrender.com/users/getAll");
       setUsers(res.data);
     } catch (err) {
       console.error(err);
@@ -24,7 +24,7 @@ function App() {
   // Add user
   const addUser = async (user) => {
     try {
-      const res = await axios.post("http://localhost:8000/users/create", user);
+      const res = await axios.post("https://scotiabank-demo.onrender.com/users/create", user);
       setUsers([...users, res.data]);
     } catch (err) {
       console.error(err);
@@ -34,7 +34,7 @@ function App() {
   // Update user
   const updateUser = async (id, updatedUser) => {
     try {
-      const res = await axios.put(`http://localhost:8000/users/update/${id}`, updatedUser);
+      const res = await axios.put(`https://scotiabank-demo.onrender.com/users/update/${id}`, updatedUser);
       setUsers(users.map((u) => (u._id === id ? res.data : u)));
       setEditingUser(null);
     } catch (err) {
@@ -45,7 +45,7 @@ function App() {
   // Delete user
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/users/delete/${id}`);
+      await axios.delete(`https://scotiabank-demo.onrender.com/users/delete/${id}`);
       setUsers(users.filter((u) => u._id !== id));
     } catch (err) {
       console.error(err);

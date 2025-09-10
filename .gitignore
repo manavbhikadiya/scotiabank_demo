@@ -5,3 +5,4 @@
 
 /client/coverage
 /client/build
+/server/.env
